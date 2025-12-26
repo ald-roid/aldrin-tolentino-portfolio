@@ -1,5 +1,6 @@
 import './Hero.css';
 import resumePdf from '../assets/Tolentino Resume.pdf';
+import profileImage from '../assets/aldrin.jpg';
 
 function Hero() {
   const scrollToSection = (sectionId) => {
@@ -46,19 +47,12 @@ function Hero() {
         <div className="hero-image">
           <div className="hero-avatar">
             <img 
-              src="src/assets/aldrin.jpg" 
-              alt="Tolentino" 
+              src={profileImage} 
+              alt="Aldrin Tolentino" 
               className="profile-photo"
               onError={(e) => {
-                // Try alternative paths
-                if (e.target.src.includes('/profile-photo.jpg')) {
-                  e.target.src = '/profile-photo.png';
-                } else if (e.target.src.includes('/profile-photo.png')) {
-                  e.target.src = '/profile-photo.jpeg';
-                } else {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
               }}
             />
             <div className="avatar-placeholder" style={{ display: 'none' }}>
