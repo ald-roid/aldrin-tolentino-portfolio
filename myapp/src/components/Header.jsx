@@ -1,23 +1,21 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   return (
     <header className="header">
       <nav className="nav">
-        <div className="nav-brand">
-          <span className="logo-text">Aldrin</span>
-        </div>
+        <Link to="/" className="nav-brand">
+          <span className="logo-text">Portfolio</span>
+        </Link>
         
         <button 
           className="menu-toggle"
@@ -30,11 +28,51 @@ function Header() {
         </button>
 
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
-          <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
-          <li><a href="#skills" onClick={() => scrollToSection('skills')}>Skills</a></li>
-          <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
-          <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
+          <li>
+            <Link 
+              to="/" 
+              className={isActive('/') ? 'active' : ''}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/about" 
+              className={isActive('/about') ? 'active' : ''}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/skills" 
+              className={isActive('/skills') ? 'active' : ''}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/projects" 
+              className={isActive('/projects') ? 'active' : ''}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/contact" 
+              className={isActive('/contact') ? 'active' : ''}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
@@ -42,4 +80,3 @@ function Header() {
 }
 
 export default Header;
-

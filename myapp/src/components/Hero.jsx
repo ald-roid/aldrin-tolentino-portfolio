@@ -1,15 +1,9 @@
+import { Link } from 'react-router-dom';
 import './Hero.css';
 import resumePdf from '../assets/Tolentino Resume.pdf';
-import profileImage from '../assets/aldrin.jpg';
+import profileImage from '../assets/aldrin1.jpg';
 
 function Hero() {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = resumePdf;
@@ -36,12 +30,12 @@ function Hero() {
             >
               Download Resume
             </button>
-            <button 
+            <Link 
+              to="/contact"
               className="btn btn-secondary"
-              onClick={() => scrollToSection('contact')}
             >
               Get In Touch
-            </button>
+            </Link>
           </div>
         </div>
         <div className="hero-image">
@@ -60,10 +54,6 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="scroll-indicator">
-        <span>Scroll Down</span>
-        <div className="scroll-arrow"></div>
       </div>
     </section>
   );

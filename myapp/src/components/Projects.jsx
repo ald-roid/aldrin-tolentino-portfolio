@@ -7,39 +7,30 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      title: 'Digicomp Sales and Service Management Information System',
+      description: 'A comprehensive management system for sales and service operations, featuring inventory tracking, customer management, service scheduling, and reporting capabilities.',
+      tech: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'jQuery'],
       github: '#',
       live: '#',
-      image: '🛒'
+      image: '💼'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates and team collaboration features.',
-      tech: ['React', 'TypeScript', 'Firebase', 'Material-UI'],
+      title: 'Sudoku Game',
+      description: 'An interactive Sudoku puzzle game with multiple difficulty levels, hint system, and timer functionality. Built with clean UI and smooth gameplay experience.',
+      tech: ['JavaScript', 'HTML/CSS', 'React', 'LocalStorage'],
       github: '#',
       live: '#',
-      image: '📋'
+      image: '🧩'
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard with location-based forecasts and interactive maps.',
-      tech: ['React', 'OpenWeather API', 'Chart.js', 'CSS3'],
+      title: 'Diploma Retrieval System',
+      description: 'A digital system for managing and retrieving academic diplomas and certificates. Features secure document storage, search functionality, and verification system.',
+      tech: ['PHP', 'MySQL', 'PDF Generation', 'JavaScript', 'Bootstrap'],
       github: '#',
       live: '#',
-      image: '🌤️'
-    },
-    {
-      id: 4,
-      title: 'Social Media Analytics',
-      description: 'Analytics dashboard for social media metrics with data visualization and reporting.',
-      tech: ['React', 'Python', 'D3.js', 'PostgreSQL'],
-      github: '#',
-      live: '#',
-      image: '📊'
+      image: '🎓'
     }
   ];
 
@@ -89,4 +80,3 @@ function Projects() {
 }
 
 export default Projects;
-

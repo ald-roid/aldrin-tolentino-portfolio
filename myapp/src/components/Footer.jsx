@@ -8,7 +8,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <p className="footer-text">
-            Designed & Built with ❤️ by Your Name
+            Designed & Built with Aldrin Tolentino
           </p>
           <p className="footer-copyright">
             © {currentYear} All rights reserved.

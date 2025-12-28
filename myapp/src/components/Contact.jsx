@@ -37,25 +37,48 @@ function Contact() {
               opportunities to be part of your visions. Feel free to reach out!
             </p>
             <div className="contact-methods">
-              <a href="mailto:your.email@example.com" className="contact-method">
-                <span className="method-icon">📧</span>
+              <a href="mailto:tolentinoaldrin369@gmail.com" className="contact-method">
+                <img 
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" 
+                  alt="Email"
+                  className="method-icon"
+                />
                 <div>
                   <h4>Email</h4>
-                  <p>your.email@example.com</p>
+                  <p>tolentinoaldrin369@gmail.com</p>
                 </div>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact-method">
-                <span className="method-icon">💼</span>
+              <a href="https://www.linkedin.com/in/aldrin-tolentino-b99750389?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="contact-method">
+                <img 
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" 
+                  alt="LinkedIn"
+                  className="method-icon"
+                />
                 <div>
                   <h4>LinkedIn</h4>
-                  <p>linkedin.com/in/yourprofile</p>
+                  <p>aldrin-tolentino</p>
                 </div>
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="contact-method">
-                <span className="method-icon">💻</span>
+              <a href="https://github.com/ald-roid" target="_blank" rel="noopener noreferrer" className="contact-method">
+                <img 
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" 
+                  alt="GitHub"
+                  className="method-icon"
+                />
                 <div>
                   <h4>GitHub</h4>
-                  <p>github.com/yourusername</p>
+                  <p>ald-roid</p>
+                </div>
+              </a>
+              <a href="https://www.facebook.com/aldrin.tolentino.581/" target="_blank" rel="noopener noreferrer" className="contact-method">
+                <img 
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" 
+                  alt="Facebook"
+                  className="method-icon"
+                />
+                <div>
+                  <h4>Facebook</h4>
+                  <p>aldrin.tolentino.581</p>
                 </div>
               </a>
             </div>
@@ -108,4 +131,3 @@ function Contact() {
 }
 
 export default Contact;
-

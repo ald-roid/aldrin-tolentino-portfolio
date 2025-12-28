@@ -1,4 +1,5 @@
 import './About.css';
+import aboutImage from '../assets/aldrin1.jpg';
 
 function About() {
   return (
@@ -19,21 +20,19 @@ function About() {
               When I'm not coding, you can find me exploring new technologies, contributing 
               to open-source projects, or sharing knowledge with the developer community.
             </p>
-            <div className="about-highlights">
-              <h3>Here are a few technologies I've been working with:</h3>
-              <ul className="tech-list">
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>TypeScript</li>
-                <li>Python</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
           </div>
           <div className="about-image">
             <div className="image-wrapper">
-              <div className="image-placeholder">
+              <img 
+                src={aboutImage} 
+                alt="Aldrin Tolentino" 
+                className="about-photo"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="image-placeholder" style={{ display: 'none' }}>
                 <span>📸</span>
               </div>
             </div>
@@ -45,4 +44,3 @@ function About() {
 }
 
 export default About;
-

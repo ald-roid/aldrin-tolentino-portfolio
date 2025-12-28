@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.nav-brand {
+  text-decoration: none;
+}
+
 .nav-brand .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
@@ -58,8 +62,13 @@
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
+}
+
+.nav-links a.active {
+  color: #1e40af;
 }
 
 .menu-toggle {

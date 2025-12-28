@@ -5,8 +5,9 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .skill-category {
@@ -86,6 +87,109 @@
   animation: shimmer 2s infinite;
 }
 
+.tools-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.tools-title {
+  color: #1e293b;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tool-item:hover {
+  transform: translateY(-5px);
+  border-color: #1e40af;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
+  background: #ffffff;
+}
+
+.tool-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(1824%) hue-rotate(213deg) brightness(96%) contrast(95%);
+  transition: transform 0.3s ease;
+}
+
+.tool-item:hover .tool-icon {
+  transform: scale(1.1);
+}
+
+.tool-icon-fallback {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e40af;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.tool-name {
+  color: #1e293b;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.student-tools {
+  margin-top: 3rem;
+}
+
+.student-tool-item {
+  align-items: flex-start;
+  text-align: left;
+  padding: 1.25rem;
+}
+
+.student-tool-item .tool-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.tool-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.tool-description {
+  color: #64748b;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);
@@ -98,5 +202,25 @@
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .tool-item {
+    padding: 1rem;
+  }
+
+  .tool-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .tool-icon-fallback {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
   }
 }
