@@ -19,7 +19,7 @@ function Hero() {
         <div className="hero-text">
           <p className="hero-greeting">Hello, I'm</p>
           <h1 className="hero-name">Aldrin Tolentino</h1>
-          <h2 className="hero-title">Aspiring Data Scientist and Software Developer</h2>
+          <h2 className="hero-title">Aspiring Software Developer and Data Scientist </h2>
           <p className="hero-description">
           I create clean, functional, and data-driven web experiences, combining modern design, efficient code, and a strong focus on user experience.
           </p>

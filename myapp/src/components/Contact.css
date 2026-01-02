@@ -1,6 +1,6 @@
 .contact {
   padding: 6rem 2rem;
-  background: #ffffff;
+  background: transparent;
 }
 
 .contact-content {
@@ -11,7 +11,7 @@
 }
 
 .contact-intro {
-  color: #475569;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 2rem;
@@ -27,18 +27,20 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  background: #f8fafc;
-  border-radius: 8px;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
   text-decoration: none;
-  border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-method:hover {
-  border-color: #1e40af;
-  transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateX(8px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .method-icon {
@@ -46,23 +48,24 @@
   height: 32px;
   object-fit: contain;
   flex-shrink: 0;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(1824%) hue-rotate(213deg) brightness(96%) contrast(95%);
+  filter: brightness(0) invert(1);
   transition: transform 0.3s ease;
 }
 
 .contact-method:hover .method-icon {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(96, 165, 250, 0.8));
 }
 
 .contact-method h4 {
-  color: #1e293b;
+  color: #ffffff;
   margin: 0 0 0.25rem;
   font-size: 1.125rem;
   font-weight: 600;
 }
 
 .contact-method p {
-  color: #64748b;
+  color: rgba(255, 255, 255, 0.6);
   margin: 0;
   font-size: 0.95rem;
 }
@@ -80,33 +83,35 @@
 }
 
 .form-group label {
-  color: #1e293b;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group textarea {
-  padding: 0.875rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  color: #1e293b;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #1e40af;
-  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .form-group textarea {

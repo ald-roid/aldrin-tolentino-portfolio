@@ -14,7 +14,8 @@ function Header() {
     <header className="header">
       <nav className="nav">
         <Link to="/" className="nav-brand">
-          <span className="logo-text">Portfolio</span>
+          <span className="logo-text">Aldrin Tolentino
+          </span>
         </Link>
         
         <button 
