@@ -12,13 +12,16 @@ function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Hello! I'm a passionate developer who loves creating digital experiences 
-              that make a difference. With a strong foundation in modern web technologies, 
-              I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+              Hello! I'm a Junior Software Developer who loves building digital solutions 
+              that make a difference. With experience in PHP, React, JavaScript, and MySQL, 
+              I create web applications that are clean, functional, and user-focused—from 
+              management systems to interactive games and diploma retrieval platforms.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies, contributing 
-              to open-source projects, or sharing knowledge with the developer community.
+              I enjoy exploring new technologies, writing efficient code, and contributing 
+              to projects that solve real problems. I also have a growing interest in 
+              graphic design and aspire to grow into a graphic designer role—combining 
+              technical skills with visual creativity to build even better digital experiences.
             </p>
           </div>
           <div className="about-image">
