@@ -6,14 +6,13 @@ function About() {
     <section id="about" className="about">
       <div className="container">
         <h2 className="section-title">
-          <span className="title-number">01.</span>
           About Me
         </h2>
         <div className="about-content">
           <div className="about-text">
             <p>
               Hello! I'm a Junior Software Developer who loves building digital solutions 
-              that make a difference. With experience in PHP, React, JavaScript, and MySQL, 
+              that make a difference. I recently graduated with a Bachelor of Science in Information Technology from De La Salle John Bosco College. With experience in PHP, React, JavaScript, and MySQL, 
               I create web applications that are clean, functional, and user-focused—from 
               management systems to interactive games and diploma retrieval platforms.
             </p>

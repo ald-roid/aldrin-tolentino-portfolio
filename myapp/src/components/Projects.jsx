@@ -28,7 +28,7 @@ function Projects() {
       image: '💼',
       category: 'development',
       links: [
-        { url: '#', label: 'GitHub' },
+        { url: 'https://github.com/ald-roid/Digicomp-Computer-Parts-and-Services.git', label: 'GitHub' },
         { url: '#', label: 'Live Demo' }
       ],
       openModal: false
@@ -36,12 +36,12 @@ function Projects() {
     {
       id: 8,
       title: 'Sudoku Game',
-      description: 'Interactive Sudoku puzzle game with multiple difficulty levels, hint system, and timer. Clean UI and smooth gameplay built with JavaScript and React.',
-      tech: ['JavaScript', 'HTML/CSS', 'React', 'LocalStorage'],
+      description: 'Interactive Sudoku puzzle game with multiple difficulty levels, hint system, and timer. Clean UI and smooth gameplay built with JavaScript and PHP.',
+      tech: ['PHP', 'MySQL', 'JavaScript', 'HTML/CSS'],
       image: '🧩',
       category: 'development',
       links: [
-        { url: '#', label: 'GitHub' },
+        { url: 'https://github.com/ald-roid/sudoku_game.git', label: 'GitHub' },
         { url: '#', label: 'Live Demo' }
       ],
       openModal: false
@@ -50,11 +50,11 @@ function Projects() {
       id: 12,
       title: 'Crack a Number',
       description: 'Number guessing puzzle game. Players crack the hidden number through clues and logic. Built with clean, engaging UI and smooth gameplay.',
-      tech: ['JavaScript', 'HTML/CSS', 'React'],
+      tech: ['PHP', 'MySQL', 'JavaScript', 'HTML/CSS'],
       image: '🔢',
       category: 'development',
       links: [
-        { url: '#', label: 'GitHub' },
+        { url: 'https://github.com/ald-roid/Crack-a-Number.git', label: 'GitHub' },
         { url: '#', label: 'Live Demo' }
       ],
       openModal: false
@@ -63,11 +63,11 @@ function Projects() {
       id: 14,
       title: 'WordWhiz',
       description: 'Word puzzle and vocabulary game. Challenge your language skills with engaging word-based gameplay and multiple difficulty levels.',
-      tech: ['JavaScript', 'HTML/CSS', 'React'],
+      tech: ['PHP', 'MySQL', 'JavaScript', 'HTML/CSS'],
       image: '📝',
       category: 'development',
       links: [
-        { url: '#', label: 'GitHub' },
+        { url: 'https://github.com/ald-roid/WordWhiz.git', label: 'GitHub' },
         { url: '#', label: 'Live Demo' }
       ],
       openModal: false
@@ -76,19 +76,19 @@ function Projects() {
       id: 15,
       title: 'CountPia',
       description: 'Counting and math-based application. Interactive tool for learning and practicing counting skills with a clean, user-friendly interface.',
-      tech: ['JavaScript', 'HTML/CSS', 'React'],
+      tech: ['PHP', 'MySQL', 'JavaScript', 'HTML/CSS'],
       image: '🔢',
       category: 'development',
       links: [
-        { url: '#', label: 'GitHub' },
+        { url: 'https://github.com/ald-roid/Countpia.git', label: 'GitHub' },
         { url: '#', label: 'Live Demo' }
       ],
       openModal: false
     },
     {
       id: 16,
-      title: 'De La Salle John BSoco Diploma Retrieval System',
-      description: 'Digital system for De La Salle John BSoco for managing and retrieving academic diplomas and certificates. Secure document storage, search functionality, and verification system.',
+      title: 'De La Salle John Bosco College Diploma Retrieval System',
+      description: 'Digital system for De La Salle John Bosco for managing and retrieving academic diplomas and certificates. Secure document storage, search functionality, and verification system.',
       tech: ['PHP', 'MySQL', 'PDF Generation', 'JavaScript', 'Bootstrap'],
       image: '🎓',
       category: 'development',
@@ -123,12 +123,9 @@ function Projects() {
     <section id="projects" className="projects">
       <div className="container">
         <h2 className="section-title">
-          <span className="title-number">03.</span>
           My Work
         </h2>
-        <p className="projects-intro">
-          Development projects and the HCDC Research Portal design. Click HCDC to explore the Figma design.
-        </p>
+
 
         {/* DEVELOPMENT — First */}
         <div className="projects-section projects-section-dev">
@@ -142,21 +139,6 @@ function Projects() {
           <div className="projects-grid projects-grid-dev">
             {developmentProjects.map((project) => (
               <div key={project.id} className="project-card project-card-dev">
-                <div className="project-image">
-                  <div className="project-icon">{project.image}</div>
-                  <div className="project-overlay project-overlay-dev">
-                    <div className="project-links">
-                      {project.links.filter(l => l.url && l.url !== '#').map((link, idx) => (
-                        <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="project-link" onClick={(e) => e.stopPropagation()}>
-                          <span>{link.label}</span>
-                        </a>
-                      ))}
-                      {project.links.filter(l => l.url && l.url !== '#').length === 0 && (
-                        <span className="project-link disabled">Coming Soon</span>
-                      )}
-                    </div>
-                  </div>
-                </div>
                 <div className="project-content">
                   <span className="project-category development">Development</span>
                   <h3 className="project-title">{project.title}</h3>
@@ -165,6 +147,16 @@ function Projects() {
                     {project.tech.map((tech, index) => (
                       <span key={index} className="tech-tag">{tech}</span>
                     ))}
+                  </div>
+                  <div className="project-links project-links-inline">
+                    {project.links.filter(l => l.url && l.url !== '#').map((link, idx) => (
+                      <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="project-link" onClick={(e) => e.stopPropagation()}>
+                        <span>{link.label}</span>
+                      </a>
+                    ))}
+                    {project.links.filter(l => l.url && l.url !== '#').length === 0 && (
+                      <span className="project-link disabled">Coming Soon</span>
+                    )}
                   </div>
                 </div>
               </div>
