@@ -122,9 +122,7 @@ function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 className="section-title">
-          My Work
-        </h2>
+        <h2 className="section-title">My Work</h2>
 
 
         {/* DEVELOPMENT — First */}

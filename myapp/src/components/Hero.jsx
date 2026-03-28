@@ -15,42 +15,56 @@ function Hero() {
 
   return (
     <section id="home" className="hero">
+      <div className="hero-accent-bar" aria-hidden="true" />
       <div className="hero-content">
         <div className="hero-text">
-          <p className="hero-greeting">Hello, I'm</p>
-          <h1 className="hero-name">Aldrin Tolentino</h1>
-          <h2 className="hero-title">Junior Software Developer</h2>
+          <div className="hero-kicker-row">
+            <span className="hero-pulse" aria-hidden="true" />
+            <span className="hero-kicker">Open to junior dev roles</span>
+          </div>
+          <p className="hero-greeting">Hello, I&apos;m</p>
+          <h1 className="hero-name">
+            <span className="hero-name-line hero-name-line--1">Aldrin</span>
+            <span className="hero-name-line hero-name-line--2">Tolentino</span>
+          </h1>
+          <h2 className="hero-title">
+            <span className="hero-title-tag">Junior Software Developer</span>
+          </h2>
           <p className="hero-description">
-            I create clean, functional, and data-driven web experiences. With a strong foundation in modern web technologies, I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+            I create clean, functional, and data-driven web experiences. With a strong
+            foundation in modern web technologies, I enjoy turning complex problems into
+            simple, beautiful, and intuitive solutions.
           </p>
           <div className="hero-buttons">
-            <button 
+            <button
+              type="button"
               className="btn btn-primary"
               onClick={handleResumeDownload}
             >
               Download Resume
             </button>
-            <Link 
-              to="/contact"
-              className="btn btn-secondary"
-            >
+            <Link to="/contact" className="btn btn-secondary">
               Get In Touch
             </Link>
           </div>
+          
         </div>
-        <div className="hero-image">
-          <div className="hero-avatar">
-            <img 
-              src={profileImage} 
-              alt="Aldrin Tolentino" 
-              className="profile-photo"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
-              }}
-            />
-            <div className="avatar-placeholder" style={{ display: 'none' }}>
-              <span>👨‍💻</span>
+        <div className="hero-visual">
+          <div className="hero-frame">
+            <div className="hero-frame-ring" aria-hidden="true" />
+            <div className="hero-avatar">
+              <img
+                src={profileImage}
+                alt="Aldrin Tolentino"
+                className="profile-photo"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="avatar-placeholder" style={{ display: 'none' }}>
+                <span>👨‍💻</span>
+              </div>
             </div>
           </div>
         </div>

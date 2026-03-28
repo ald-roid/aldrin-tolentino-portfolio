@@ -1,39 +1,150 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(180deg, #000000 0%, #0a0e27 50%, #1a1f3a 100%);
   position: relative;
   overflow-x: hidden;
+  background: transparent;
 }
 
 main {
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
-/* Smooth scrolling */
+/* Ambient background (keeps blues, adds depth + motion) */
+.ambient-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  animation: orbDrift 22s ease-in-out infinite;
+}
+
+.ambient-orb--1 {
+  width: min(72vw, 640px);
+  height: min(72vw, 640px);
+  top: -18%;
+  right: -12%;
+  background: radial-gradient(circle at 30% 30%, rgba(96, 165, 250, 0.45) 0%, transparent 65%);
+}
+
+.ambient-orb--2 {
+  width: min(60vw, 520px);
+  height: min(60vw, 520px);
+  bottom: -20%;
+  left: -15%;
+  background: radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.35) 0%, transparent 65%);
+  animation-delay: -8s;
+  animation-duration: 28s;
+}
+
+.ambient-orb--3 {
+  width: 320px;
+  height: 320px;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+  filter: blur(60px);
+  opacity: 0.7;
+  animation-duration: 18s;
+}
+
+.ambient-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 20%, transparent 75%);
+  opacity: 0.45;
+}
+
+.ambient-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes orbDrift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  45% {
+    transform: translate(-3%, 4%) scale(1.06);
+  }
+  70% {
+    transform: translate(2%, -2%) scale(0.98);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Container max-width for content */
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 clamp(1.25rem, 4vw, 2rem);
 }
 
-/* Smooth page transitions */
+/* Shared section headings */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3.5vw, 2.65rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 4.5rem;
+  max-width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-soft));
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+/* Page enter */
 main > * {
-  animation: fadeIn 0.6s ease-out;
+  animation: pageEnter 0.75s var(--ease-out) both;
 }
 
-@keyframes fadeIn {
+@keyframes pageEnter {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb,
+  main > * {
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }

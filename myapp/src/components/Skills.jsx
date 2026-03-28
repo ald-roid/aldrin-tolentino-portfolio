@@ -122,9 +122,7 @@ function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <h2 className="section-title">
-          Skills & Technologies
-        </h2>
+        <h2 className="section-title">Skills &amp; Technologies</h2>
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
             <div key={index} className="skill-category">
